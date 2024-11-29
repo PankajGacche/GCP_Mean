@@ -4,7 +4,57 @@
 
 The project is a MEAN project and uses node version 18.
 
-- Application run locally and tested its ruinning.
+## Step 1: Set Up Google Cloud Shell Environment:
+- Go to the GCP console: https://console.cloud.google.com
+
+![alt text](README_Images/image.png)
+
+- Click on the terminal icon (Google Cloud Shell) at the top-right corner:
+
+![alt text](README_Images/image-1.png)
+
+## 2. Set the GCP project:
+
+- gcloud config set project [PROJECT_ID]
+
+![alt text](README_Images/image-2.png)
+
+![alt text](README_Images/image-3.png)
+
+## 3. Enable required APIs: Enable the Google Kubernetes Engine (GKE) and Google 
+- Container Registry (GCR) APIs: gcloud services enable container.googleapis.com
+- gcloud services enable containerregistry.googleapis.com
+
+![alt text](README_Images/image-4.png)
+
+- Step 2: Create a GKE Cluster:
+- Create the GKE cluster: Run the following command in Cloud Shell to create a 3-node GKE cluster in the specified zone: 
+
+gcloud container clusters create mern-cluster --zone us-central1-a --num-nodes=3
+
+![alt text](README_Images/image-5.png)
+
+![alt text](README_Images/image-6.png)
+
+## 2. Get cluster credentials: Fetch the credentials for your newly created cluster:
+gcloud container clusters get-credentials mern-cluster --zone us-central1-c
+
+![alt text](README_Images/image-7.png)
+
+## Step 3: Clone the MERN Application Repository:
+Clone the Sample MERN application: In Cloud Shell, clone the GitHub repository:
+
+![alt text](README_Images/image-8.png)
+
+## Step 4: Build and Push Docker README_Images/images to Google Container Registry (GCR)
+
+Authenticate with GCR:
+
+gcloud auth configure-docker
+
+![alt text](README_Images/image-9.png)
+
+- Application run locally and tested its running.
 ![alt text](ReadMe_Images/image.png)
 ![alt text](ReadMe_Images/image-1.png)
 ![alt text](ReadMe_Images/image-2.png)
