@@ -41,7 +41,7 @@ gcloud container clusters get-credentials mern-cluster --zone us-central1-c
 
 ![alt text](README_Images/image_7.png)
 
-## Step 3: Clone the MERN Application Repository:
+## Step 3: Clone the MEAN Application Repository:
 Clone the Sample MERN application: In Cloud Shell, clone the GitHub repository:
 
 ![alt text](README_Images/image_8.png)
@@ -51,21 +51,7 @@ Clone the Sample MERN application: In Cloud Shell, clone the GitHub repository:
 Authenticate with GCR:
 
 gcloud auth configure-docker
-
 ![alt text](README_Images/image_9.png)
-
-- Application run locally and tested its running.
-![alt text](ReadMe_Images/image.png)
-![alt text](ReadMe_Images/image-1.png)
-![alt text](ReadMe_Images/image-2.png)
-
-- Created docker files for backend and frontend build iot and push to ECR.
-![alt text](ReadMe_Images/image-3.png)
-![alt text](ReadMe_Images/image-4.png)
-![alt text](ReadMe_Images/image-5.png)
-![alt text](ReadMe_Images/image-6.png)
-![alt text](ReadMe_Images/image-7.png)
-![alt text](ReadMe_Images/image-8.png)
 
 - Created pipeline on jenkins server.
 ![alt text](ReadMe_Images/image-9.png)
