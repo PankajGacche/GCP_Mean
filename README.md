@@ -34,7 +34,6 @@ The project is a MEAN project and uses node version 18.
 gcloud container clusters create mern-cluster --zone us-central1-a --num-nodes=3
 
 ![alt text](README_Images/image_5.png)
-
 ![alt text](README_Images/image_6.png)
 
 ## 2. Get cluster credentials: Fetch the credentials for your newly created cluster:
